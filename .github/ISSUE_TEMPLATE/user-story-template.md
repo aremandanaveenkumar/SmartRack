@@ -7,7 +7,7 @@ assignees: aremandanaveenkumar
 
 ---
 
-As a **role** I can **capability** so that **received benefit**
+As a **role** I can **capability** so that I can **received benefit**
 
 ### Acceptance Criteria
 - Acceptance criteria 1
