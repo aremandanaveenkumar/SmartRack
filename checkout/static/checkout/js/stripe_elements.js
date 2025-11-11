@@ -1,7 +1,7 @@
 
 
 var stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
-var client_secret = $('#id_client_secret').text().slice(1, -1);
+var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripe_public_key);
 var elements = stripe.elements();
 var style = {
@@ -57,7 +57,6 @@ form.addEventListener('submit', function (ev) {
         'save_info': saveInfo,
     };
     var url = '/checkout/cache_checkout_data/';
-
     $.post(url, postData).done(function () {
         stripe.confirmCardPayment(clientSecret, {
             payment_method: {
@@ -71,7 +70,6 @@ form.addEventListener('submit', function (ev) {
                         line2: $.trim(form.street_address2.value),
                         city: $.trim(form.town_or_city.value),
                         country: $.trim(form.country.value),
-                        state: $.trim(form.county.value),
                     }
                 }
             },
@@ -84,7 +82,6 @@ form.addEventListener('submit', function (ev) {
                     city: $.trim(form.town_or_city.value),
                     country: $.trim(form.country.value),
                     postal_code: $.trim(form.postcode.value),
-                    state: $.trim(form.county.value),
                 }
             },
         }).then(function(result) {
