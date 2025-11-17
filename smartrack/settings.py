@@ -143,7 +143,7 @@ LOGIN_REDIRECT_URL = '/'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), ssl_require=True, conn_max_age=600)
+        'default': dj_database_url.parse(os.environ.get('HEROKU_POSTGRESQL_ORANGE_URL'), ssl_require=True, conn_max_age=600)
     }
 else: 
     DATABASES = {
