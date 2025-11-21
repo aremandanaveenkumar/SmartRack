@@ -22,7 +22,6 @@ def bag_contents(request):
                 'quantity': item_data,
                 'product': product,
             })
-            
         else:
             product = get_object_or_404(Product, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
@@ -34,15 +33,13 @@ def bag_contents(request):
                     'product': product,
                     'size': size,
                 })
-
-
     if total < settings.FREE_SHIPPING_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_SHIPPING_THRESHOLD - total
     else:
         delivery = 0
         free_delivery_delta = 0
-    
+
     grand_total = delivery + total
 
     context = {
@@ -57,4 +54,3 @@ def bag_contents(request):
     }
 
     return context
-
