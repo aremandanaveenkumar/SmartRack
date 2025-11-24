@@ -253,6 +253,15 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    border-top: 1px solid #e7e7e7;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
