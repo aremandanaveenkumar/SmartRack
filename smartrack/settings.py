@@ -231,14 +231,16 @@ if 'USE_AWS' in os.environ:
     # DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-STORAGES = {
+    STORAGES = {
     "default": {
         "BACKEND": "custom_storages.MediaStorage"
         },
     "staticfiles": {
         "BACKEND": "custom_storages.StaticStorage"
         },
-}
+    }
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
