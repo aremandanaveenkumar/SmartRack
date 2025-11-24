@@ -262,6 +262,9 @@ input[name='q']::placeholder {
     border-top: 1px solid #e7e7e7;
 }
 
+.qty-container{
+    padding-right: 60px !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -332,7 +335,4 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 
-    .qty-container{
-        padding-right: 50px !important;
-    }
 }
