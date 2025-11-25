@@ -7,8 +7,8 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
 from bag.contexts import bag_contents
-from profiles.models import UserProfile
-from profiles.forms import UserProfileForm
+from profiles.models import UserProfile, AddressField
+from profiles.forms import UserProfileForm, AddressFieldForm
 
 import stripe
 import json
@@ -110,12 +110,12 @@ def checkout(request):
                     'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
                     'phone_number': profile.default_phone_number,
-                    'country': profile.default_country,
-                    'postcode': profile.default_postcode,
-                    'town_or_city': profile.default_town_or_city,
-                    'street_address1': profile.default_street_address1,
-                    'street_address2': profile.default_street_address2,
-                    'state': profile.default_state,
+                    'country': profile.default_address.country,
+                    'postcode': profile.default_address.postcode,
+                    'town_or_city': profile.default_address.town_or_city,
+                    'street_address1': profile.default_address.street_address1,
+                    'street_address2': profile.default_address.street_address2,
+                    'state': profile.default_address.state,
                 })
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
@@ -147,21 +147,26 @@ def checkout_success(request, order_number):
     
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
+        address = AddressField.objects.filter(user=request.user).first()
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
-
         # Save the user's info
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
-                'default_country': order.country,
-                'default_postcode': order.postcode,
-                'default_town_or_city': order.town_or_city,
-                'default_street_address1': order.street_address1,
-                'default_street_address2': order.street_address2,
-                'default_state': order.state,
             }
+            address_data = {
+                'country': order.country,
+                'postcode': order.postcode,
+                'town_or_city': order.town_or_city,
+                'street_address1': order.street_address1,
+                'street_address2': order.street_address2,
+                'state': order.state,
+            }
+            address_form = AddressFieldForm(address_data, instance=address)
+            if address_form.is_valid():
+                address_form.save()
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()

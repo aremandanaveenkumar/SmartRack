@@ -41,6 +41,7 @@
                     <p class="text-muted">Default Delivery Information</p>
                     {% csrf_token %}
                     {{ form|crispy }}
+                    {{ address_form|crispy }}
                     <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
                 </form>
                 </div>
