@@ -34,7 +34,7 @@ def profile(request):
     profile.default_address = address
     profile.save()
     form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+    orders = profile.orders.all().order_by('-date')
 
     template = 'profiles/profile.html'
     context = {
