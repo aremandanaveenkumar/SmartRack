@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /accounts/
 Disallow : /bag/
 Sitemap: https://smart-rack-project-6598ef5f8933.herokuapp.com/sitemap.xml
+Sitemap: https://smart-rack-project-6598ef5f8933.herokuapp.com/static/sitemap.xml
