@@ -1,4 +1,5 @@
 # SmartRack
+This site is a type of ECommerce website, with working payment system from Stripe, deployed on Heroku, integrating static & media files in Amazon Web Services.
 
 ![Mockup Screenshot](media/mockup_screenshot.png)
 
@@ -8,8 +9,47 @@
 
 ### User Stories
 
-- As
+- As a Site User I can register for a account so that I can have my own account and view my personal profile
 
+- As a Site User I can Login or Logout so that I can view my Account Information, view my Orders..
+
+- As a Site User I can receive feedback for account registration so that I can proceed with login, purchases, viewing my account, orders
+
+- As a Site User I can be able to reset my password if I forgot the password so that I can recover my account
+
+- As a Site User I can have a personalised user profile so that I can view / edit my account information, orders, payment information.
+
+- As a Shopper I can View List of Products so that I can select Products to purchase
+
+- As a Shopper I can Search for Products by name or description so that I can find a specific Product of my requirement
+
+- As a Shopper I can easily view the total amount of my purchases so that I canavoid spending too much
+
+- As a Shopper I can get access to available Deals, Clearance Sale Products or any Special Offers so that I can take advantage of the offers on Products
+
+- As a Shopper I can View Individual Product details so that I can find more details about the product, price, ratings, product images, models or sizes.
+
+- As a Shopper I can be able to Sort the list of available Products so that I can choose the best rated, best priced, view the sorted Products
+
+- As a Shopper I can Sort Products by selecting multiple categories so that I can find best priced, rated products from all categories selected
+
+- As a Shopper I can View or Modify Items in my Cart to be purchased so that I can Identitfy total cost of Items, able to Modify Items before checkout
+
+- As a Shopper I can Easily select Size & Quantity of Products so that I can ensure selecting the right size, quantity of required product
+
+- As a Admin/StoreOwner I can Add new Products so that I can Update my Store/Website with new Items for Shoppers
+
+- As a Admin/StoreOwner I can Edit/Update Products so that I can Modify product prices, descriptions, images, update deals and other data
+
+- As a Admin/StoreOwner I can Delete a Product so that I can remove items which are no longer for sale
+
+- As a Shopper I can Enter Payment Information easily so that I can check out with out any hassels
+
+- As a Shopper I want to feel my Personal information to be safe & secure so that I can confidiently provide necessary information for purchasing
+
+- As a Shopper I can View my Order confirmation after checkout so that I can verify that I haven't made mistakes
+
+- As a Shopper I want to receive email confirmation after checkout so that I can keep the confirmation of my purchases for records
 
 ---
 ### Wireframes
@@ -24,19 +64,118 @@
 - Product Entity Relationship Diagram
 ![](media/product_erd.png)
 
+- Category Entity Relationship Diagram
+![](media/category_erd.png)
+
+- AddressField Entity Relationship Diagram
+![](media/address_field_erd.png)
+
+- UserProfile Entity Relationship Diagram
+![](media/user_profile_erd.png)
+
+- Order Entity Relationship Diagram
+![](media/order_erd.png)
+
+- OrderLineItem Entity Relationship Diagram
+![](media/order_line_item_erd.png)
+
 ---
 ## Features
 
 - The Entire Site is powered by Django & styled using Bootstrap to ensure the site is responsive over different devices & different screen sizes, and at the same time providing a smooth experience for the user.
 
+- All static files & media content are hosted through Amazon Web Services (AWS) static web hosting.
+
+- Apart from accepting account registration by email, Sign up using Google account is also provided.
+
+- Stripe is used for Payments.
+
+- MailerLite is used for managing subscriptions.
+
+- Postgresql used for database storage
+
+- Deployment of the entire site is done on Heroku.
+
 ### Existing Features
 - __Navigation Bar__
 
-    The fully responsive navigation bar including links to Home, About, Register & Login
+    The fully responsive navigation bar including links to Home, Register, Login & Logout, View Bag, Search Bar, Profile, ProductManagement, All Products, Special Offers
 
     - __Home__
 
-        The main Home page 
+        The main Home page contains the navigation bar as mentioned above, a short description of the website itself, with a shop now button, a background image, a footer with links to social media pages and newsletter subscription form.
+
+    - __Register__
+
+        The Sign up page allows users to register themself so that they can proceed with shopping and managing their own profile and accessing all provided data over the website.
+
+        As per the latest requirements of django allauth, users need to enter email address two times, a valid username & a valid password to register.
+
+        A verification email will be sent to the email address provided, which upon verification the user is able to login.
+
+    - __Login / Logout__
+
+        The SignIn page allows registered and validated users to sign in, for a logged in user - Logout button is visible to allow them to signout.
+
+    - __Forgot Password?__
+
+        The SignIn page also allows users to reset their password, provided the user is already registered. Accessing the forgot password button with a vaild email, a verification mail shall be sent to the user thourgh with the user can reset the password.
+
+    - __Bag__
+
+        A logged in user at any time can access their shopping cart / bag  by accessing the bag icon from navigation bar on the top.
+
+- __Main Content__
+
+  - __Products__
+
+    Clicking the Shop Now button on Home Page shows all the available products as a scrollable grid view on the website.
+    
+    Each Product is a simple card view with a product image, name, price of product, category of the product and rating provided by other users.
+
+    Free Delivery purchases over a specific amount is displayed on the top.
+
+    Total products available are shown on the top right of the list.
+
+    Sorting the products option is shown on the top left of the list.
+
+    Multiple Sorting can be done as :
+
+    - By Price Low to High
+    - By Price High to Low
+    - By Rating Low to High
+    - By Rating High to Low
+    - By Name A-Z
+    - By Name Z-A
+    - By Category A-Z
+    - By Category Z-A
+
+    Direct view of products by single sort option can be accessed from the dropdown button All Products from the navigation bar which sorts products by :
+    - By Price
+    - By Rating
+    - By Category
+    - All Products
+
+    Special Offers on products can be accessed from the dropdown button Special Offers from the navigation bar with shows :
+    - New Arrivals
+    - Deals
+    - Clearance
+    - All Specials
+
+  - __Product Detail__
+
+    A individual product detail can be accessed from clicking any product from the products view.
+
+    Each detail view shows the image, name, price and rating,
+    A description is provided for the product selected,
+    if the product has size options, a size option dropdown is provided for selection of product size,
+    A quantity selector is provided to select the quantity of product to be purchased,
+    An Add to Bag button is provided to add the selected product to the shopping cart / bag.
+    A toast message shows the selected product added to your shopping cart/bag with a description of total amount and a link to checkout.
+    To keep shopping for further more products, keep shopping button can be accessed.
+
+
+- __Footer__
 
 
 
