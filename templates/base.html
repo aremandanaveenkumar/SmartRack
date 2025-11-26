@@ -29,6 +29,7 @@
 
     {% block extra_css %}
     <link rel="sitemap" type="application/xml" title="Sitemap" href="{% static 'sitemap.xml' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     {% endblock %}
 
     {% block corejs %}
@@ -167,6 +168,19 @@
         <script type="text/javascript">
             $('.toast').toast('show');
         </script>
+
+        <script>
+            (function (w, d, e, u, f, l, n) {
+                w[f] = w[f] || function () {
+                    (w[f].q = w[f].q || [])
+                    .push(arguments);
+                }, l = d.createElement(e), l.async = 1, l.src = u,
+                n = d.getElementsByTagName(e)[0], n.parentNode.insertBefore(l, n);
+            })
+                (window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
+            ml('account', '1945521');
+        </script>
+
         
     {% endblock %}
 </body>

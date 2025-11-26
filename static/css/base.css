@@ -254,10 +254,73 @@ input[name='q']::placeholder {
 }
 
 .footer {
+    /* background: linear-gradient(to right, #1a1c20, #2c3e50); */
+    padding: 75px 0 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    /* background: linear-gradient(to right, #3498db, #2ecc71); */
+}
+
+.footer-about {
+    color: #333333;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.footer h5 {
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #3498db;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #a4b5c6;
+}
+
+.ml-embedded{
+    background-color: transparent !important;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        margin-bottom: 40px;
+    }
 }
 
 .qty-container{
