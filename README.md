@@ -177,11 +177,14 @@ This site is a type of ECommerce website, with working payment system from Strip
 
 - __Footer__
 
-
+    The footer is having links to social media pages and a subscribe to newsletter form, where a user by providing their email address can subscribe to newsletter for latest updates on products, deals.
 
 ### Features Left To Implement
 
-
+- Each product can be having its own customized size/shape, which can be implemented as a seperate model and linked to the product model.
+- A user can set products as favourites or add to a list which can be later browsed for easy access.
+- A user can be provided with adding multiple delivery addresses with a single login, where a default or delivery address can be selected at the time of checkout or from user profile.
+- 
 
 ---
 
