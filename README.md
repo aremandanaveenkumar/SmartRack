@@ -296,6 +296,7 @@ This site is a type of ECommerce website, with working payment system from Strip
 ![ ](media/light_house_report_1.png)
 ![ ](media/light_house_report_2.png)
 ![ ](media/light_house_report_3.png)
+![ ](media/light_house_report_4.png)
     
 ### Testing User Stories from User Experience (UX) Section
 
