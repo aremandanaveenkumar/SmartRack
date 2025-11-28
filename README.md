@@ -300,9 +300,68 @@ This site is a type of ECommerce website, with working payment system from Strip
     
 ### Testing User Stories from User Experience (UX) Section
 
-- As a site user 
-![ ](media/user_story_1_1.png)
+- As a Site User I can register for a account so that I can have my own account and view my personal profile
+![ ](media/user_story_1.png)
 
+- As a Site User I can Login or Logout so that I can view my Account Information, view my Orders..
+![ ](media/user_story_2.png)
+
+- As a Site User I can receive feedback for account registration so that I can proceed with login, purchases, viewing my account, orders
+![ ](media/user_story_3.png)
+
+- As a Site User I can be able to reset my password if I forgot the password so that I can recover my account
+![ ](media/user_story_4.png)
+
+- As a Site User I can have a personalised user profile so that I can view / edit my account information, orders, payment information.
+![ ](media/user_story_5.png)
+
+- As a Shopper I can View List of Products so that I can select Products to purchase
+![ ](media/user_story_6.png)
+
+- As a Shopper I can Search for Products by name or description so that I can find a specific Product of my requirement
+![ ](media/user_story_7.png)
+
+- As a Shopper I can easily view the total amount of my purchases so that I can avoid spending too much
+![ ](media/user_story_8.png)
+
+- As a Shopper I can get access to available Deals, Clearance Sale Products or any Special Offers so that I can take advantage of the offers on Products
+![ ](media/user_story_9.png)
+
+- As a Shopper I can View Individual Product details so that I can find more details about the product, price, ratings, product images, models or sizes.
+![ ](media/user_story_10.png)
+
+- As a Shopper I can be able to Sort the list of available Products so that I can choose the best rated, best priced, view the sorted Products
+![ ](media/user_story_11.png)
+
+- As a Shopper I can Sort Products by selecting multiple categories so that I can find best priced, rated products from all categories selected
+![ ](media/user_story_12.png)
+
+- As a Shopper I can View or Modify Items in my Cart to be purchased so that I can Identitfy total cost of Items, able to Modify Items before checkout
+![ ](media/user_story_13.png)
+
+- As a Shopper I can Easily select Size & Quantity of Products so that I can ensure selecting the right size, quantity of required product
+![ ](media/user_story_14.png)
+
+- As a Admin/StoreOwner I can Add new Products so that I can Update my Store/Website with new Items for Shoppers
+![ ](media/user_story_15.png)
+
+- As a Admin/StoreOwner I can Edit/Update Products so that I can Modify product prices, descriptions, images, update deals and other data
+![ ](media/user_story_16.png)
+
+- As a Admin/StoreOwner I can Delete a Product so that I can remove items which are no longer for sale
+![ ](media/user_story_17.png)
+
+- As a Shopper I can Enter Payment Information easily so that I can check out with out any hassels
+![ ](media/user_story_18.png)
+
+- As a Shopper I want to feel my Personal information to be safe & secure so that I can confidiently provide necessary information for purchasing
+![ ](media/user_story_19.png)
+
+- As a Shopper I can View my Order confirmation after checkout so that I can verify that I haven't made mistakes
+![ ](media/user_story_20.png)
+
+- As a Shopper I want to receive email confirmation after checkout so that I can keep the confirmation of my purchases for records
+![ ](media/user_story_21.png)
 
 
 ---
