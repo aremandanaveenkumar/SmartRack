@@ -258,9 +258,26 @@ This site is a type of ECommerce website, with working payment system from Strip
 
 ## Testing
 
-- Unit tests are writted for the python code in the project.
+- Unit tests are written for the python code in the project.
 
 - Tests are written for forms & views.
+
+        SmartRack/
+        ├── bag/
+        │   ├── tests_forms.py
+        │   ├── tests_views.py
+        ├── checkout/
+        │   ├── tests_forms.py
+        │   ├── tests_views.py
+        ├── home/
+        │   ├── tests_views.py
+        ├── products/
+        │   ├── tests_forms.py
+        │   ├── tests_views.py
+        ├── profiles/
+        │   ├── tests_forms.py
+        │   ├── tests_views.py
+
 
 - Forms test perform form validity checks and form fields validity checks.
 
