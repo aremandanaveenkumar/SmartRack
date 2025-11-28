@@ -289,6 +289,10 @@ input[name='q']::placeholder {
     margin-top: 20px;
 }
 
+.social-links a{
+    color: blue;
+}
+
 .social-icon {
     width: 35px;
     height: 35px;

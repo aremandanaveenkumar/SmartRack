@@ -162,6 +162,8 @@ This site is a type of ECommerce website, with working payment system from Strip
     - Clearance
     - All Specials
 
+    A user logged in as site admin has access to edit or delete a product directly from the products page, without browsing to the Django Admin Page
+
   - __Product Detail__
 
     A individual product detail can be accessed from clicking any product from the products view.
@@ -173,6 +175,71 @@ This site is a type of ECommerce website, with working payment system from Strip
     An Add to Bag button is provided to add the selected product to the shopping cart / bag.
     A toast message shows the selected product added to your shopping cart/bag with a description of total amount and a link to checkout.
     To keep shopping for further more products, keep shopping button can be accessed.
+    To proceed to viewing bag or checkout user can access the toast notification message or through the bag button on the navigation bar.
+
+  - __Bag__
+
+    View Bag / Shopping Cart directly from the naviagation bar, provides the current shopping bag details
+    Shopping Bag shows details of the product in horizontal layout
+    Image, Product Name, Size, Sku of the product, Price of the product and quantity selector and finally the subtotal for that product with quantity
+    Adjusting the quantity through quantity selector increment or decrement will update the bag only after confirming with Update button below the quantity selector.
+    An Product can be removed from the Shopping Bag by pressing Remove button below the quantity selector.
+    Toast messages will be displayed upon accessing the update or remove buttons.
+
+    Grand Total of the shopping bag is updated accordingly
+    Delivery Costs also will be shown if Free Delivery Threshold is not reached.
+    Also a note displays for remaining shopping amount for qualifying to the Free Delivery.
+
+    To keep further shopping, Keep Shopping button can be accessed.
+    To checkout, Secure Checkout button can be accessed.
+
+  - __CheckOut__
+    
+    A User can browse with out logging in to the website, but is always suggested to register to the website, so that all the order history, order details can be saved and viewed later.
+
+    User information as fullname, email address and delivery information can be updated from this page.
+    If the default delivery address needs to be updated the check box - Save this delivery information to my profile can be checked before completing order.
+    Providing the payment card details and accessing the Complete Order processes the payment and updates the delivery information, order details from Stripe, which also will be added to the Orders in DataBase.
+    A toast notification message will be displayed further after successful payment with order number.
+
+    A checkout success page displays a Thank You message with the summary of Order & Delivery Information.
+
+    A button - Now Checkout the Latest Deals! is provided for further access to the uses to check latest deals if any.
+
+    A confirmation email will be sent to provided email address.
+
+  - __My Profile__
+
+    Each registered user is provided by default their own Profile page.
+    For the firt time visitor to the My Profile page, only username and email address is shown, as this the basic information provided while registering to the website.
+    The checkout page requires a fullname of the user for shipping details, these data can be updated here in my profile page
+    The default delivery information, the delivery address for the user can be updated here.
+
+    For the regular visitor to the My Profile page, the saved information will be displayed, which can be modified if required and to save the updated information, access the Update Information button.
+
+    A toast message will be displayed upon saving the updated Profile.
+
+    On the right side to the profile information Order History is displayed as a table:
+        - Order Number
+        - Date of Purchase
+        - Ordered items - from order inlineitems
+        - Order Total
+
+  - __Product Management__
+
+    A user registered as super user or the Store Owner/Admin has access to Link Product Management from the dropdown MyAccount.
+
+    Using this page Store Owner/Admin can be able to Add new Products to the Data Base and update their WebSite directly.
+
+    Necessary information like - Name, Description & Price of the Product is must to create a Product.
+
+    Select the Category in which a new Product is to be created.
+    Assign a Sku for the Product.
+    Set the has sizes for the Product.
+    Provide the initial Rating.
+    Select the Product Image, which will be shown on the page for preview.
+    To create the new Product and add to the list of existing products - Click Add Product, which will redirect to the products page.
+
 
 
 - __Footer__
@@ -181,10 +248,11 @@ This site is a type of ECommerce website, with working payment system from Strip
 
 ### Features Left To Implement
 
+- A user logged in as superuser, Site Admin has the ability to delete a product - which as of now deletes immediately on pressing the delete button, later can be extended using the toast messages to ask for confirmation again.
 - Each product can be having its own customized size/shape, which can be implemented as a seperate model and linked to the product model.
 - A user can set products as favourites or add to a list which can be later browsed for easy access.
 - A user can be provided with adding multiple delivery addresses with a single login, where a default or delivery address can be selected at the time of checkout or from user profile.
-- 
+- Each Product can have its own reviews provided by other customers, which can be shown in the product detail page.
 
 ---
 
