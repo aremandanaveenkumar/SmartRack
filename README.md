@@ -52,13 +52,6 @@ This site is a type of ECommerce website, with working payment system from Strip
 - As a Shopper I want to receive email confirmation after checkout so that I can keep the confirmation of my purchases for records
 
 ---
-### Wireframes
-
-- Home Page
-![](media/homepage_wireframe.png)
-
-
----
 ### Relationship Diagrams
 
 - Product Entity Relationship Diagram
