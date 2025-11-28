@@ -302,15 +302,25 @@ This site is a type of ECommerce website, with working payment system from Strip
 
 - As a Site User I can register for a account so that I can have my own account and view my personal profile
 ![ ](media/user_story_1.png)
+![ ](media/user_story_1_1.png)
+![ ](media/user_story_1_2.png)
+![ ](media/user_story_1_3.png)
 
 - As a Site User I can Login or Logout so that I can view my Account Information, view my Orders..
 ![ ](media/user_story_2.png)
+![ ](media/user_story_2_1.png)
+![ ](media/user_story_2_2.png)
 
 - As a Site User I can receive feedback for account registration so that I can proceed with login, purchases, viewing my account, orders
-![ ](media/user_story_3.png)
+![ ](media/user_story_1_2.png)
+![ ](media/user_story_1_3.png)
 
 - As a Site User I can be able to reset my password if I forgot the password so that I can recover my account
 ![ ](media/user_story_4.png)
+![ ](media/user_story_4_1.png)
+![ ](media/user_story_4_2.png)
+![ ](media/user_story_4_3.png)
+![ ](media/user_story_4_4.png)
 
 - As a Site User I can have a personalised user profile so that I can view / edit my account information, orders, payment information.
 ![ ](media/user_story_5.png)
@@ -355,17 +365,13 @@ This site is a type of ECommerce website, with working payment system from Strip
 ![ ](media/user_story_18.png)
 
 - As a Shopper I want to feel my Personal information to be safe & secure so that I can confidiently provide necessary information for purchasing
-![ ](media/user_story_19.png)
+![ ](media/user_story_18.png)
 
 - As a Shopper I can View my Order confirmation after checkout so that I can verify that I haven't made mistakes
 ![ ](media/user_story_20.png)
 
 - As a Shopper I want to receive email confirmation after checkout so that I can keep the confirmation of my purchases for records
 ![ ](media/user_story_21.png)
-
-
----
-## Known Bugs
 
 
 ---
