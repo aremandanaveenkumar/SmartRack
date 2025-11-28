@@ -264,11 +264,11 @@ This site is a type of ECommerce website, with working payment system from Strip
 
         SmartRack/
         ├── bag/
-        │   ├── tests_forms.py
-        │   ├── tests_views.py
+        │   ├── tests_forms.py  - pending todo
+        │   ├── tests_views.py  - pending todo
         ├── checkout/
-        │   ├── tests_forms.py
-        │   ├── tests_views.py
+        │   ├── tests_forms.py  - pending todo
+        │   ├── tests_views.py  - pending todo
         ├── home/
         │   ├── tests_views.py
         ├── products/
