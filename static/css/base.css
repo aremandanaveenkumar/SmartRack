@@ -1,4 +1,4 @@
-html {
+shop-now-buttonhtml {
     height: 100%;
 }
 
@@ -23,6 +23,10 @@ body {
     text-transform: uppercase;
 }
 
+.delivery-p {
+    font-size: 25px;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -31,6 +35,7 @@ body {
     background: black;
     color: white;
     min-width: 260px;
+    font-size: 25px;
 }
 
 .btn-black {
@@ -367,6 +372,15 @@ input[name='q']::placeholder {
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
+
+    .delivery-p {
+    font-size: 16px;
+    }
+    
+    .shop-now-button {
+    font-size: 16px;
+    }
+}
 
     .nav-link {
         padding: 0.15rem;
