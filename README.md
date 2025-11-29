@@ -89,6 +89,12 @@ This site is a type of ECommerce website, with working payment system from Strip
 
 - Deployment of the entire site is done on Heroku.
 
+- For Web Marketing, Facebook pages was used and below is the link to the facebook page:
+
+https://www.facebook.com/people/Smart-Rack/61583931914246/
+
+![](media/facebook_page.png)
+
 ### Existing Features
 - __Navigation Bar__
 
