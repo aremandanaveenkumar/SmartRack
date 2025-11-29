@@ -43,7 +43,7 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     """             
     if created:
         UserProfile.objects.create(user=instance)     
-    # Existing users: just save the profile
+        
     address = AddressField.objects.filter(user=instance).first()
     if not address:
         address = AddressField.objects.create(user=instance)

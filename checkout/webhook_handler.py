@@ -58,12 +58,10 @@ class StripeWH_Handler:
 
         charge = stripe.Charge.retrieve(charge_id)
 
-        # Clean data in the shipping details
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
         
-        # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':

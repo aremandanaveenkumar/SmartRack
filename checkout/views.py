@@ -134,7 +134,6 @@ def checkout(request):
         }
 
         return render(request, template, context)
-        # end of the corrected indentation
 
 
 def checkout_success(request, order_number):
@@ -148,10 +147,8 @@ def checkout_success(request, order_number):
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         address = AddressField.objects.filter(user=request.user).first()
-        # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
-        # Save the user's info
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
